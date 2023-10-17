@@ -1,0 +1,32 @@
+#include<stdio.h>
+
+int check_prime(int num)
+{
+    if(num == 0 || num == 1)
+    {
+        return 0;
+    }
+    for(int i = 2;i <= num/2;i++)
+    {
+        if(num%i == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main()
+{
+    int num;
+    printf("Enter number: ");
+    scanf("%d", &num);
+    int res = check_prime(num);
+    if(res == 0)
+    {
+        printf("Not prime number\n");
+    }
+    else{
+        printf("Prime number\n");
+    }
+}
